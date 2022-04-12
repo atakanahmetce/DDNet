@@ -1,7 +1,6 @@
 <?php
 
 function fetch_data($url){
-        #$base = 'https://wwwdev.ebi.ac.uk/crossbar';
         $base = 'https://www.ebi.ac.uk/Tools/crossbar';
         // Create a stream
         $opts = array(
@@ -16,14 +15,12 @@ function fetch_data($url){
                 #print_r($content);
                 if(!is_object($content)){
                         $error = error_get_last();
-                        $f = fopen('data/crossbar_errors.txt', "a");
+                        $f = fopen('fetch_errors.txt', "a");
                         fwrite($f,'Error while fetching data from CROssBAR:'."\n".'Request Url: '.$base.$url."\n".'Time: '.date("Y-m-d H:i:s a")."\nError: ".$error['message']."\n\n");
                         $num_of_tries++;
-                        #fwrite($f,$base.$url."\n");
                         # wait for a moment for try again
                         # if we enter this block 3 times, fetching this file will be cancelled
                         sleep(1); # wait 1 second
-                        #return false;
                 }else
                         break;
         }
@@ -31,6 +28,5 @@ function fetch_data($url){
                 return false;
         return $content;
 }
-
 
 ?>
