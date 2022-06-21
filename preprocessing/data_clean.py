@@ -56,32 +56,27 @@ def apply_kmeans(data,n):
     
     return prediction
 
-def selectK(method,X,y,k = 256):
+def selectK(X,y,k = 256, method = 'chi2'):
     
     '''
     Select best k feature by the stats values and return matrix and selected
     feature column indices.
     
     '''
-    model = SelectKBest(method, k = k)
+
+    if method == 'chi2':
+        model = SelectKBest(chi2, k = k)
+
+    elif method == 'f_classif':
+        model = SelectKBest(f_classif, k = k)
+
+    elif method == 'mutual_classif':
+        model = SelectKBest(mutual_info_classif, k = k)
+
     new_arr = model.fit_transform(X,y)
     selected_idx = model.get_support(indices = True)
     
     return new_arr, selected_idx
-
-def common_indices(X,y,k):
-    
-    '''
-    Apply chi2 and f_classification stats and select best k
-    '''
-    X_chi2,chi_idx = selectK(chi2, X, y, k)
-    X_fclass,f_idx = selectK(f_classif, X, y, k)
-
-    commons = []
-    for i in range(k):
-        if chi_idx[i] == f_idx[i]:
-            commons.append(chi_idx[i])
-    return commons
 
 def outlier_detection(data, function = 'z_score',threshold = 3.0):
     
