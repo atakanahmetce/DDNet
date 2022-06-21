@@ -21,57 +21,29 @@ def get_n2v(file_name):
     return embeds
 
 
-def path_explorer(src, target, G, cutoff):
+def get_paths(file_name):
     
-    simple_paths = nx.all_simple_paths(G,source = src, target = target, cutoff = cutoff)
-    path_dict = {}
-    for p in simple_paths:
-        sim = 1
-        for n in range(len(p)-1):
-            sim*=G[p[n]][p[n+1]]['weight']
-        
-        if len(p)-1 not in path_dict.keys():
-            path_dict[len(p)-1]=sim
-        else:
-            path_dict[len(p)-1]+=sim
+    paths = {}
+    with open(file_name) as f:
+        for row in f:
+            row = re.split(',',row.strip('\n'))
+            embeds[(row[0], row[1])] = list(np.array(re.split(',',row[-1]),dtype = float))
+    return paths
     
-    path_vector = []
-    for i in range(1, cutoff+1):# in path_dict.keys():
-        if i in path_dict.keys():
-            path_vector.append(path_dict[i])
-        else:
-            path_vector.append(0)
-    return path_vector
-
-
-def get_path(src, target, G, cutoff = 3):
-        
-    path_vector = []
-    if src in G.nodes and target in G.nodes:
-        #if G.has_edge(src, target):
-        path_vector = path_explorer(src, target, G, cutoff)
-        #else:
-        #    for i in range(cutoff):
-        #        path_vector.append(0)
-    else:
-        for i in range(cutoff):
-            path_vector.append(float(0))
-    return path_vector
-    
-def gen_matrix(file_embeds, names, G, labels_list,fx_name,fy_name, cutoff = 3):
+def gen_matrix(file_embeds, file_paths, names, G, labels_list,fx_name,fy_name, cutoff = 3):
 
     fx = open(fx_name,'w')
     fy = open(fy_name,'w')
     embeds = get_n2v(file_name = file_embeds)
-
+    paths = get_paths(file_name = file_paths)
     for k,src in enumerate(names):
         for t, target in enumerate(names):
  
             if src in embeds.keys() and target in embeds.keys():
+                
                 src_node = embeds[src]
                 target_node = embeds[target]
-                    
-                path_features = get_path(src, target, G, cutoff = cutoff)
+                path_vector = paths[(src,target)]
                 
                 x_vector = np.array(src_node + target_node + path_features,dtype = str)
                 
