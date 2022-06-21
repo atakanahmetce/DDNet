@@ -5,6 +5,7 @@ Created on Wed May 25 19:48:09 2022
 @author: Sameitos
 """
 import os 
+import numpy as np
 import networkx as nx
 from node2vec import Node2Vec
 import itertools
@@ -40,20 +41,22 @@ def n2v_embedding(center, subgraph, dimensions = 32, walk_length = 30,
 
 
 
-def gen_n2v(input_file, names, G, hop = 1,
+def gen_n2v(output_filename, G, hop = 1,
     dimensions = 32, num_walks = 100, walk_length = 30,
     p = 1, q = 1, workers = 4):
     
-    with open(input_file,'w') as f:
-        for j,k in enumerate(names):
-            if k in G.nodes:
+    if not os.path.isfile(output_filename):
+        with open(output_filename,'w') as f:
+            for j,k in enumerate(G.nodes):
+                #if k in G.nodes:
                 src_sub = generate_subs(k, G,hop = hop)
                 src_node = n2v_embedding(k, src_sub, dimensions = dimensions, num_walks = num_walks, workers = workers,
                                         p = p, q = q, walk_length = walk_length)
                 write_src = ','.join(np.array(src_node, dtype = str))
                 f.write(f'{k} {write_src}\n')
 
-    
+    else:
+        print('The embedding file is already exist')
 
 
 

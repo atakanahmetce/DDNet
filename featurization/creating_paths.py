@@ -8,7 +8,7 @@ Created on Sun Apr 24 21:44:16 2022
 import networkx as nx
 import numpy as np
 from tqdm import tqdm
-import re, os, sys
+import re, os
 import matplotlib.pyplot as plt
 
 
@@ -21,15 +21,18 @@ def get_sim_mat(file_name):
     return np.loadtxt(file_name)
 
 def create_edgelist(file_name, names,sim_lim, similarity_matrix):
-
-    fused = similarity_matrix
-    f = open(file_name,'w')
-    for k in range(len(fused)):
-        for t in range(len(fused)):
-            weight = fused[k,t]
-            if weight > sim_lim:
-                f.write(f'{names[k]} {names[t]} {weight}\n')
-    f.close()
+    
+    if not os.path.isfile(file_name):        
+        fused = similarity_matrix
+        f = open(file_name,'w')
+        for k in range(len(fused)):
+            for t in range(len(fused)):
+                weight = fused[k,t]
+                if weight > sim_lim:
+                    f.write(f'{names[k]} {names[t]} {weight}\n')
+        f.close()
+    else:
+        print('The edgelist file is already exist')
 
 def get_G(file_name):
     

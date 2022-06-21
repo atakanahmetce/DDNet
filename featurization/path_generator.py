@@ -5,9 +5,10 @@ Created on Tue Jun 21 03:58:24 2022
 @author: Sameitos
 """
 
+import os
 import numpy as np
 import networkx as nx
-
+from tqdm import tqdm
 
 def path_explorer(src, target, G, cutoff):
     
@@ -36,11 +37,9 @@ def get_path(src, target, G, cutoff):
         
     path_vector = []
     if src in G.nodes and target in G.nodes:
-        #if G.has_edge(src, target):
+        
         path_vector = path_explorer(src, target, G, cutoff)
-        #else:
-        #    for i in range(cutoff):
-        #        path_vector.append(0)
+        
     else:
         for i in range(cutoff):
             path_vector.append(float(0))
@@ -48,15 +47,17 @@ def get_path(src, target, G, cutoff):
     return path_vector
 
 
-def find_paths(names, path_filename, G, cutoff = 3):
+def find_paths(output_filename, G, cutoff = 3):
     
-    with open(path_filename,'w') as f:
-        for src in names:
-            for target in names:
-                path_vector = get_path(src,target,G,cutoff)
-                write_path = ' '.join(np.array(path_vector,dtype = str))
-                f.write(f'{src},{target},{write_path}\n')
-
+    if not os.path.isfile(output_filename):
+        with open(output_filename,'w') as f:
+            for src in tqdm(G.nodes):
+                for target in G.nodes:
+                    path_vector = get_path(src,target,G,cutoff)
+                    write_path = ' '.join(np.array(path_vector,dtype = str))
+                    f.write(f'{src},{target},{write_path}\n')
+    else:
+        print('The path file is already exist')
 
 
 
