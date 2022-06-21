@@ -20,7 +20,6 @@ create_edgelist(file_name = edgelist_filename,
                sim_lim = 0.3)
 G = get_G(file_name = edgelist_filename)
 
-print('n2v done')
 #generate paths and save them to file between all drugs found in graph:
 meta_path_file = 'data/meta_paths/test_paths.txt'
 find_paths(output_filename = meta_path_file, G = G, cutoff = 3)
@@ -30,7 +29,7 @@ print('graph done')
 #form embeddings and save to file
 embed_filename = 'data/n2v_embeddings/test_embeds.txt'
 gen_n2v(output_filename = embed_filename, G = G,
-       hop = 1, walk_length = 15, workers = 1)
+       hop = 1, workers = 1)
 
 print('paths done')
 #feature (reconstruction) and label matrix generation
