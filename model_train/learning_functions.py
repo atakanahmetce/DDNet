@@ -197,7 +197,7 @@ def train(X_train, y_train, ml_type = 'rf', isValid = False,
                         n_layer = n_layer,
                         hidden_layer_size = hidden_layer_size)
         
-        return deep_model(X_train, y_train, deep_kwargs = deep_param, isValid = False)
+        return deep_model(X_train, y_train, deep_kwargs = deep_param, isValid = isValid)
     
 
 

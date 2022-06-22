@@ -7,4 +7,3 @@ Created on Mon Jun 20 04:22:39 2022
 
 from .learning_functions import train
 from .evaluation_functions import evaluate_score
-from .data_loader import get_data
