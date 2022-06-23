@@ -3,7 +3,7 @@
 This project is to predict drug drug interactions by an assumption says similar nodes tend to show similar behaviors. Therefore, we set a network and try to represent drugs in new dimensions and also we add topological information by concetenate meta-paths. This github project can be downloaded with 
 
 ```
-git clone ___
+git clone https://github.com/atakanahmetce/g-DTIPred.git
 ```
 
 ### Background
