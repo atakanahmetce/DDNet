@@ -25,25 +25,29 @@ from tqdm import tqdm
 #feature selection based on chi2 and f_classification with labels from BIRCH clustering
 #if clustering Silhouette score is low, then apply clustering can causes misleading
 
-def pca(X,y = None,threshold = 0.95):
+def pca(X,y = None, plot = False, threshold = 0.95):
     
     '''
     Descrition:
         apply pca to data plot data if labels are active and always return first 2 column
     Parameters:
         X: {numpy array, list}, feature matrix
-        y: {numpy array, list}, label matrix, if it is not None, plot is drawn
+        y: {numpy array, list}, label matrix
         threshold: {float}, minimum threshold that PCA fitted X holds variance ratio of 
             original X
+        plot: {bool}, If True, scatter plot is drawn
     Return:
         new_X: Fitted data holds variance ratio of X as threshold allows
     '''
     
     pca = PCA(n_components = len(X[0]))
     X_2 = pca.fit_transform(X)
-    if y is not None:
+    if plot:
         fig = plt.figure(figsize = (8,8))
-        plt.scatter(X_2[:,0], X_2[:,1] , c = y)
+        if y is not None:
+            plt.scatter(X_2[:,0], X_2[:,1] , c = y)
+        else:
+            plt.scatter(X_2[:,0], X_2[:,1])
     variance = pca.explained_variance_ratio_
     
     total_var = 0
@@ -54,9 +58,6 @@ def pca(X,y = None,threshold = 0.95):
             last_idx = k+1
             break   
     new_X = X_2[:,[i for i in range(last_idx)]]
-    
-
-    return new_X
 
 def selectK(X,y,k = 256, method = 'chi2'):
     

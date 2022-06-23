@@ -13,8 +13,6 @@ from tqdm import tqdm
 
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.model_selection import RandomizedSearchCV,RepeatedKFold,RepeatedStratifiedKFold
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import Normalizer
 from sklearn.metrics import confusion_matrix
 
 import numpy as np
@@ -61,8 +59,8 @@ class Net(nn.Module):
 
 def deep_model(X, y, deep_kwargs, isValid = False):
     
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')#Device
-    print(torch.cuda.get_device_name(0))
+    device = torch.device("cpu")#Device
+    
     
     lr = deep_kwargs['lr'] # learning rate
     eps = deep_kwargs['eps'] # epsilon

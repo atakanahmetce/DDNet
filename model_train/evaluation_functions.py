@@ -10,7 +10,6 @@ import copy
 from math import sqrt
 from scipy import stats
 from sklearn import preprocessing, metrics
-import rdkit 
 from sklearn.metrics import confusion_matrix
 import torch 
 
@@ -397,7 +396,7 @@ def evaluate_score(model,X,y,isDeep = False,preds = False):
 
     """
     if isDeep:
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        device = torch.device("cpu")
         if isinstance(X,np.ndarray):
             X = torch.from_numpy(X).to(device)
         
