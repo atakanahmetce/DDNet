@@ -29,7 +29,7 @@ Then, we concetenate meta-paths between nodes to add topological information of 
 
 Project guidlines are given in use-cases.
 
-***System***: Operating system independent
+***System***: Operating system independent//
 ***Required Packages***: numpy 1.18.5, scipy 1.4.1, pandas 1.3.3, scikit-learn 1.0.1, pytorch 1.9.1, rdkit 2021.09.1
 
 
