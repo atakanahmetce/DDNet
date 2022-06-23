@@ -35,7 +35,7 @@ Project guidlines are given in use-cases.
 
 ### Data sources
 - drug SMILES data: CROssBAR
-- drug-drug interaction: drugbank
+- drug-drug interaction: DrugBank
 
 >PPI and DTI interaction fetched via CROssBAR Data API<br>
 >https://www.ebi.ac.uk/Tools/crossbar/swagger-ui.html
