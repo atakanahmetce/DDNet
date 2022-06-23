@@ -21,7 +21,8 @@ Representational learning is done via node2vec algorithm that uses only nodes' 1
 Then, we concetenate meta-paths between nodes to add topological information of the drug network to node2vec feature of drugs. These paths are calculated according to length of the paths between two nodes. (Figure 2)
 
 ![Figure_2](https://user-images.githubusercontent.com/37181660/175314066-e42a1b6d-5a9f-494d-ba6e-f60e32b54779.svg)
-*Figure.2 An example of meta-path features generation and feature vector reconstruction*
+<div align="center"> Figure.2 An example of meta-path features generation and feature vector reconstruction </div>
+<br/>
 
 
 ### Use Case
