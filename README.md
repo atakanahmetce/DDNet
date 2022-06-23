@@ -34,9 +34,8 @@ Project guidlines are given in use-cases.
 
 
 ### Data sources
-- protein-protein interaction (PPI): intact
+- drug SMILES data: CROssBAR
 - drug-drug interaction: drugbank
-- drug-target interaction (DTI): drugbank
 
 >PPI and DTI interaction fetched via CROssBAR Data API<br>
 >https://www.ebi.ac.uk/Tools/crossbar/swagger-ui.html
