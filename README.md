@@ -9,9 +9,9 @@ git clone ___
 ### Background
 Representational learning is done via node2vec algorithm that uses only nodes' 1-hop or 2 hops neighbors information. The reason why not using entire graph is to decrease complexity and to increase node and graph influence. The way we applied is that:
 
-| : -- : |
+
 ![Figure_1](https://user-images.githubusercontent.com/37181660/175314027-792efa16-e895-48ad-a182-b4667ea996aa.svg)
-Figure.1 An example of how subgraphs are generated and feature embeddings 
+*Figure.1 An example of how subgraphs are generated and feature embeddings*
 
  - First, we generate subgraphs (1-hop and 2-hops) for each sample
  - Second, subgraphs are given to node2vec algorithm (it is modified word2vec algorithm)
@@ -19,9 +19,8 @@ Figure.1 An example of how subgraphs are generated and feature embeddings
 
 Then, we concetenate meta-paths between nodes to add topological information of the drug network to node2vec feature of drugs. These paths are calculated according to length of the paths between two nodes. (Figure 2)
 
-| ![Figure_2](https://user-images.githubusercontent.com/37181660/175314066-e42a1b6d-5a9f-494d-ba6e-f60e32b54779.svg) |
-| : -- : |
-| Figure.2 An example of meta-path features generation and feature vector reconstruction |
+![Figure_2](https://user-images.githubusercontent.com/37181660/175314066-e42a1b6d-5a9f-494d-ba6e-f60e32b54779.svg)
+*Figure.2 An example of meta-path features generation and feature vector reconstruction*
 
 
 ### Use Case
