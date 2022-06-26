@@ -177,7 +177,7 @@ def train(X_train, y_train, ml_type = 'rf', isValid = False,
             parameters = dict(
                 loss = ['deviance','exponential'],
                 learning_rate = np.linspace(0.01,0.15,num = 5),
-                criterion = ['mse','friedman_mse'],
+                criterion = ['squared_error','friedman_mse'],
                 #max_depth = np.arange(3,10),
                 )
             return apply_cv(model,parameters, X_train, y_train)
