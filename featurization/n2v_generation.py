@@ -45,6 +45,25 @@ def gen_n2v(output_filename, G, hop = 1,
     dimensions = 32, num_walks = 100, walk_length = 30,
     p = 1, q = 1, workers = 4):
     
+    """
+    Description:
+        Generates node2vec features from weighted graph.
+    Paramters:
+        output_filename: {str}, file name where embedded features
+            are stored.
+        G: {nx.Graph}, Weighted and undirected Networkx graph
+        hop: {int}, {1,2}, default = 1, number of hop to generate
+            subgraphs
+        dimensions: {int}, default = 32, number of dimensions nodes
+            will be embedded.
+        num_walks: {int}, default = 100, number of random walks
+        walk_length: {int}, default=30, lenght of walks
+        p: {float}, default = 1, hyperparameter for word2vec
+        q: {float}, default = 1, hyperparameter for word2vec
+        workers: {int}, default = 4, number of paralel workers.
+            If OS is Windows, workers = 1.
+    """
+    
     if not os.path.isfile(output_filename):
         with open(output_filename,'w') as f:
             for j,k in enumerate(G.nodes):
