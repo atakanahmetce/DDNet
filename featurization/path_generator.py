@@ -49,6 +49,16 @@ def get_path(src, target, G, cutoff):
 
 def find_paths(output_filename, G, cutoff = 3):
     
+    """
+    Description:
+        Finds all paths and creates meta-path features respect to cutoff.
+        Features are stored in a file.
+    Parameters:
+        output_filename: {str}, file name where meta-path features will
+            be stored.
+        G: {nx.Graph}, Unweighted and undirected graph
+        cutoff: lenght of each path from source to target node.
+    """
     if not os.path.isfile(output_filename):
         with open(output_filename,'w') as f:
             for src in tqdm(G.nodes):
