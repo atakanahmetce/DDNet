@@ -154,7 +154,28 @@ def train(X_train, y_train, ml_type = 'rf', isValid = False,
           n_layer = 5,# # of layer
           hidden_layer_size = 128, #dimensions of hidded layers
           ):
+    """
+    Description:
+        This function is to apply RandomForest (sklearn), GradientBoosting
+        (sklearn) and Feed Forward Neural Network (pytorch) learning algorithms
+        to data.
+    Paramters:
+        X_train: {numpy array), feature matrix, nxd
+        y_train: {numpy array), feature matrix, nx1
+        ml_type: {str}, {'rf','gb','deep'}, machine learning algorithms.
+            'rf'= RandomForest, 'gb'= GradientBoosting and 'deep' = FFNN
+        isValid: {bool}, default = False, if True, 5-fold cross validation is
+            applied
+        epochs: {int}, number of epochs, (FFNN parameters)
+        p: {float}, dropout value, (FFNN parameters)
+        lr: {float}, learning rate, (FFNN parameters)
+        eps: {float}, epsilon value for ZeroDivisionError, (FFNN parameters)
+        n_layer: {int}, number of hidded layer, (FFNN parameters)
+        hidden_layer_size: {int}, size of hidden layer, (FFNN parameters)
+    Return:
+        model: learnt model from training.
     
+    """
     if ml_type == 'rf':
         if isValid:
             model = RandomForestClassifier()
