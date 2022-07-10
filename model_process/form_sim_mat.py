@@ -49,7 +49,7 @@ def vec2sim(data, function = 'cos', name = False):
         
         if name:
             names = []
-            sim_arr = np.zeros((len(data.keys()),len(data.keys())))
+            sim_arr = np.zeros((len(data),len(data)))
             for k,i in enumerate(data):
                 for t,j in enumerate(data):
                     sim_arr[k,t] = 1 - f(data[i][1:], data[j][1:])
