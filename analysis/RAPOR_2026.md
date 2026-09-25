@@ -37,7 +37,9 @@
 - DDNet'in öz-denetimi bu makalede "Kutu 1" vaka analizi olarak yer alır.
 - Tahmini maliyet ≈ 350 kişi-saat (iki yarı zamanlı yazar için ~18–20 hafta). Birincil hedef *Briefings in Bioinformatics*.
 - Dürüst not: hakem ajanlarının üçü de özgünlüğe 5/10 verdi. Bu yüksek etkili değil, **sağlam ve yayımlanabilir** bir makale.
-- Planın dayandığı iki kilit pilot bulgu bağımsız olarak yeniden üretildi (bkz. §8.1).
+- Planın dayandığı iki kilit pilot bulgu bağımsız olarak yeniden üretildi (bkz. §8.1):
+  - DDI-Ben TWOSIDES S1'de eğitimsiz "bilinen ilacın derecesi" skoru ROC-AUC 87.5 veriyor. Nedeni negatiflerin kuruluş biçimi; partner-eşleşmeli negatiflerle skor 50'ye iniyor. Birebir doğrulandı.
+  - DrugBank-86 S1'de eğitimsiz eklemeli bir kural makro-F1 ≈54–57 veriyor; yayımlanmış en iyi değer ≈57 (ikincil kaynaktan).
 
 **Acil bir konu (makaleden bağımsız): lisans.**
 - Herkese açık, MIT lisanslı bu repo DrugBank DDI tablosunun tamamını (`data/drug-drug_interaction_Drugbank.csv`, 2,77 M satır) ve DrugBank kimliklerini/SMILES/hedefleri içeriyor.
@@ -149,7 +151,7 @@ S2 standart sapması 0.03–0.09. Sonuçlar:
 
 ---
 
-## 3.5 "Yeni ilaç" deneyi (D1→D2)
+### 3.5 "Yeni ilaç" deneyi (D1→D2)
 
 - Rapordaki protokolde tüm DDNet modelleri **AUROC 0.40–0.53**, MCC −0.07…0.03 veriyor.
 - Raporun F1 0.64–0.80 değerleri hep-pozitif tahmincinin F1 değerinden (0.736) iyi değil.
@@ -267,17 +269,18 @@ Burada α ve β ilaç düzeyi eğilimlerdir. Farmakolojide bunlar "perpetrator/v
 
 **İddia:** Yayımlanmış soğuk-başlangıç (S1/S2) skorlarının büyük kısmı α+β'den geliyor. Bu bir "sızıntı" değil, meşru farmakoloji. Ama benchmark'lar bunu ayrı raporlamazsa "yeni ilaç için etkileşim tahmini" iddiası şişkin kalır.
 
-### 7.1 Kilit pilot bulgular (bağımsız doğrulama durumu için §8.1'e bakın)
+### 7.1 Kilit pilot bulgular (bağımsız doğrulama ayrıntıları §8.1'de)
 
-1. **DrugBank-86, DDI-Ben rastgele bölme.**
-   - Eğitimsiz, çift terimi olmayan eklemeli bir "ana etki" kuralı kullanıldı: bilinen ilacın rol-özgü tip dağılımı × yeni ilacın 10 en benzer (Tanimoto) komşusunun dağılımı.
-   - Sonuç: S1 makro-F1 **57.0** (acc 67.0, κ 60.0), S2 **22.3**.
-   - Yayımlanmış en iyi değerler S1 ≈ 56.8–57.3 (EmerGNN, DDI-GPT, TextDDI), S2 ≈ 22.5. Bu değerler şimdilik ikincil kaynaktan.
-2. **TWOSIDES, DDI-Ben rastgele S1.**
+1. **TWOSIDES, DDI-Ben rastgele S1 (birebir doğrulandı).**
    - Hiç eğitim yok: yalnızca *bilinen* ilacın o yan-etki etiketi için eğitim grafındaki derecesi kullanıldı.
-   - Sonuç: ROC-AUC **87.5** / PR-AUC **83.6**. Hakemsiz DRIFT modeli 82.3 / 80.3 bildiriyor.
-   - Mekanizma: S1 negatiflerinin neredeyse hiçbiri (9.890'dan 16'sı) bilinen ilacı korumuyor. Negatifler çoğunlukla farklı bir bilinen ilacı içeriyor ve bunu derece skoru önemsizce ayırıyor.
-   - Önerilen düzeltme: bilinen ilacı ve etiketi koruyup yalnızca yeni ilacı bozan "partner-eşleşmeli negatifler".
+   - Sonuç, benchmark'ın kendi değerlendiricisiyle: ROC-AUC **87.5** / PR-AUC **83.6**. Hakemsiz DRIFT modeli 82.3 / 80.3 bildiriyor.
+   - Mekanizma: S1 negatifleri pozitiflerden bağımsız rastgele (bilinen, yeni) çiftler. Pozitiflerde bilinen ilaç popüler ilaçlardan geliyor, negatiflerde neredeyse düzgün seçiliyor. Derece skoru bu farkı yakalıyor.
+   - Düzeltme: bilinen ilacı ve etiketi koruyup yalnızca yeni ilacı değiştiren "partner-eşleşmeli negatifler". Bunlarla aynı skor tam 50'ye düşüyor.
+   - Negatiflerin %17'si ters yönde kayıtlı pozitif çiftler (etiket gürültüsü).
+2. **DrugBank-86, DDI-Ben rastgele bölme (kısmen doğrulandı; sayı tarife bağlı).**
+   - Eğitimsiz, çift terimi olmayan eklemeli bir "ana etki" kuralı kullanıldı: bilinen ilacın rol-özgü tip dağılımı × yeni ilacın 10 en benzer (Tanimoto) komşusundan türetilen dağılım.
+   - Sonuç: S1 makro-F1 **≈54–57** (tarife göre; acc 65–68, κ 58–61), S2 **≈16–22**.
+   - Yayımlanmış en iyi değerler S1 ≈ 57 (EmerGNN, DDI-GPT, TextDDI), S2 ≈ 22.5. Bu değerler ikincil kaynaktan ve teyit edilmeli.
 3. **Kümeli ve onay-tarihi bölmeleri** ana etkilere daha dirençli.
    - Bu bölmelerde CROssBAR v1 hedef listelerinden hesaplanan hedef-kNN eğilimleri, Tanimoto-kNN'e göre makro-F1'i belirgin artırıyor: küme S1 28.8 → 41.2 (test), 26.7 → 34.6 (doğrulama).
    - Kappa'da artış küçük. Hedef listeleri DrugBank'ten türetildiği için "küratörlük bağlantısı" kontrolü gerekiyor (yalnız ChEMBL biyoaktivite varyantı).
@@ -355,7 +358,37 @@ Sentezin kaba yargısı (veri değil): ~12 ayda merdivenin bir yerinde hakemli y
 
 ### 8.1 Kilit pilot bulguların bağımsız doğrulaması
 
-*(3. tur sonuçları bu bölüme işlenecek.)*
+Üç ajan kullanıldı: iki sıfırdan yeniden uygulama (önce pilot koduna bakmadan) ve benchmark değerlendirici koduyla satır satır karşılaştırma yapan bir şüpheci. Betikler `analysis/ddiben_pilots/verify_*` altında. Karar: **"iddialar uyarılarla geçerli"**. Açıklanamayan veya diskalifiye edici bir hata bulunmadı ve test etiketi sızıntısı yok.
+
+**Bulgu 2 (TWOSIDES kısayolu): birebir doğrulandı ve en sağlam manşet bu.**
+- DDI-Bench'in kendi `trainer.py` değerlendiricisinin birebir kopyasıyla ve EmerGNN değerlendiricisiyle test S1 ROC-AUC **87.52** / PR-AUC **83.58**; doğrulama S1'de 88.03 / 84.38.
+- Aynı taban kümeli bölmede test S1 85.5 / 81.6, S0'da 95.2 / 93.7 veriyor. S2'de tanım gereği 50.
+- **Mekanizma düzeltildi.** Negatifler "bilinen ilacı değiştirilmiş" çiftler değil. 9.890 negatiften 9.761'i pozitifle **hiçbir ilacı paylaşmayan** rastgele (bilinen, yeni) çiftler.
+  - Pozitiflerdeki bilinen ilaç dereceyle orantılı (Spearman +0.98).
+  - Negatiflerdeki bilinen ilaç 516 eğitim ilacına neredeyse düzgün dağılmış (Spearman −0.57).
+  - Sonuç olarak bilinen ilacın ortalama eğitim derecesi pozitiflerde 185, negatiflerde 103. Derece skoru ikisini bu yüzden ayırıyor.
+- **Partner-eşleşmeli negatiflerle** (bilinen ilaç ve etiket sabit, yalnız yeni ilaç değişiyor) aynı skor tam olarak **50.0 / 50.0**'a düşüyor. Benchmark AUROC'unun neredeyse tamamı partnerler-arası sıralamadan geliyor; aynı-etiket karşılaştırmalarının yalnız %0,16'sı partner-içi.
+- Ek bulgu: test S1 negatiflerinin **%17'si** (1.684/9.890) aynı veri kümesinde ters yönde pozitif olarak kayıtlı. Bunların %7,1'i değerlendirilen etiketi de paylaşıyor. Yani negatiflerde etiket gürültüsü var.
+- Karşılaştırma: hakemsiz DRIFT modeli aynı protokolde 82.3 / 80.3 bildiriyor. Protokol tutarlı, ama DDI-Ben'in kendi TWOSIDES tablosuna erişilemedi.
+- Erişilebilir hiçbir kaynakta bu artefakt raporlanmamış. OpenDDI'nin tam metni okunamadığı için bu kesin değil.
+
+**Bulgu 1 (DrugBank-86 ana-etki tabanı): kısmen doğrulandı. Sayı tarife bağlı, sıralama değil.**
+- Pilotun 57.0 / 67.0 / 60.0 (S1) ve 22.3 / 40.5 / 23.5 (S2) değerleri birebir üretilebiliyor, ama yalnızca belirli bir tarifle:
+  - dağılımların öncele doğru büzülmesi: (sayım + önsel) / (n + 1),
+  - yeni ilaç için komşu *sayımlarının* benzerlik-ağırlıklı ortalaması.
+- İddianın düz ifadesiyle (ham dağılımlar, 10 komşunun ağırlıksız ortalaması) sonuç S1 **53–55**, S2 **16–18** makro-F1.
+- 54 makul varyant taramasında S1 53.2–57.4 ve S2 14.7–25.3. Doğrulama kümesinde seçilen varyant testte 54.1 veriyor. Pilot tarifinde k doğrulamada seçilirse (5 veya 20) testte 56.8–58.5.
+- Doğruluk ve κ sağlam: S1'de 65–68 / 58–61.
+- Bootstrap %95 GA: satır bazlı [54.4, 59.3], yeni-ilaç kümeli [51.0, 62.2].
+- **Karşılaştırılan yayımlanmış sayılar doğrulanamadı.** DDI-Ben Tablo 9'a yalnızca hakemsiz DRIFT'in kopyasından ulaşıldı. Bu kopyada muhtemel bir aktarım hatası var: DDI-GPT'nin S2 değeri SAGAN'ınkiyle birebir aynı.
+- Değerlendirici farkı: DDI-Ben `trainer.py` etiket için tüm dosyalardaki ilişkilerin en küçük indeksini alıyor ve son eksik batch'i atıyor. Pilot ise EmerGNN/TextDDI kuralını kullandı. Etki ≤ 0,4 puan.
+- DRIFT ön yayını S0 için eğitimsiz ilaç-başı arama tablosu bildiriyor (%78,4 doğruluk). Ama "S1/S2 aktarılabilir etkileşim örüntülerini ölçer" diye savunuyor ve S1/S2 tabanı raporlamıyor. Önerilen makale doğrudan bu iddiayı test ediyor.
+
+**Plana etkisi:**
+- **TWOSIDES bulgusu makalenin açılış sonucu olmalı.**
+- DrugBank iddiası "eğitimsiz eklemeli bir kural yayımlanmış en iyi S1 skorunun birkaç puan yakınında (≈54–57'ye karşı ≈57)" diye ifade edilmeli, "eşit veya üstün" değil. Tarif doğrulama kümesinde seçilip ön-kayıtla sabitlenmeli.
+- G1 eşiği (ME-S1 ≥ 52) düz tarifle bile geçiliyor.
+- "Yayımlanmış sayıyla eşleşiyor" cümlesi G0'da DDI-Ben tam metninden teyit edilmeden kullanılmamalı.
 
 ### 8.2 Birinci tur doğrulayıcılarının düzelttiği noktalar
 
@@ -460,5 +493,6 @@ Tüm ayrıntılar, düzeltmeler ve eksik bulunan kaynaklar ajan çıktılarında
 | `analysis/reeval/` | Ampirik yeniden değerlendirme betikleri (`s01`–`s06`), `RESULTS.md` (İngilizce, tüm tablolar), `out/*.json` |
 | `analysis/reeval_verify/` | Bağımsız sıfırdan doğrulama (`v00`–`v05`) |
 | `analysis/pilot_scale/` | 3.618 ilaçlık havuzda düzgün ve hub örneklem pilotu (`p1_*.py`, `RESULTS.md`, `out/`) |
+| `analysis/ddiben_pilots/` | DDI-Ben üzerinde ana-etki / derece tabanları, CROssBAR hedef-kNN pilotu ve üç bağımsız doğrulama (DDI-Bench klonu gerekir; bkz. klasördeki README) |
 
 Çalıştırma: repo kökünden `python analysis/reeval/s01_characterize.py` vb. Gerekenler: numpy, scipy, scikit-learn, pandas, networkx; bazı adımlar için rdkit ve torch (CPU). Betikler yalnızca `data/` klasörünü okur. DrugBank'ten türetilmiş ham çift listeleri bu klasöre kopyalanmadı.

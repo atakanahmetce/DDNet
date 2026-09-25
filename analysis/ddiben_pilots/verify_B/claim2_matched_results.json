@@ -1,0 +1,320 @@
+{
+ "valid_S1": {
+  "construction": {
+   "new drug replaced / known drug replaced / new-drug position kept": 9462,
+   "new drug kept / known drug replaced / new-drug position kept": 109,
+   "new drug replaced / known drug kept / new-drug position kept": 7
+  },
+  "neg_any_recorded_pos": 1637,
+  "neg_label_overlap": 691,
+  "orig|partner_degree": [
+   87.99850048548419,
+   84.33090338633606
+  ],
+  "orig|knn_degree_k10": [
+   85.21264935411253,
+   82.6663669659801
+  ],
+  "orig|knn_newside_degree_k10": [
+   49.52311497577772,
+   51.5475372497416
+  ],
+  "orig|knn_link_k5": [
+   61.4614429917867,
+   59.714967035601795
+  ],
+  "orig|knn_link_k10": [
+   66.47676609241462,
+   63.69862940375531
+  ],
+  "orig|knn_link_k20": [
+   74.57643859605628,
+   71.07700517794818
+  ],
+  "matched_rowlabel|partner_degree": {
+   "per_label": [
+    50.0,
+    50.0
+   ],
+   "pooled": [
+    50.0,
+    50.0
+   ],
+   "frac_pos_neg_tied": 1.0
+  },
+  "matched_rowlabel|knn_degree_k10": {
+   "per_label": [
+    50.05866640973438,
+    50.200133899746746
+   ],
+   "pooled": [
+    50.08849817369412,
+    50.013560128265425
+   ],
+   "frac_pos_neg_tied": 0.006594587334631656
+  },
+  "matched_rowlabel|knn_newside_degree_k10": {
+   "per_label": [
+    50.06127713003665,
+    52.18140978869085
+   ],
+   "pooled": [
+    50.45471561820115,
+    50.00354774884437
+   ],
+   "frac_pos_neg_tied": 0.006594587334631656
+  },
+  "matched_rowlabel|knn_link_k5": {
+   "per_label": [
+    52.59937692412366,
+    51.75441702269617
+   ],
+   "pooled": [
+    52.71800399312028,
+    51.68480257179523
+   ],
+   "frac_pos_neg_tied": 0.608280169229736
+  },
+  "matched_rowlabel|knn_link_k10": {
+   "per_label": [
+    51.28375527018242,
+    50.804733932953674
+   ],
+   "pooled": [
+    51.34528852490432,
+    50.68108898869967
+   ],
+   "frac_pos_neg_tied": 0.4726680545295816
+  },
+  "matched_rowlabel|knn_link_k20": {
+   "per_label": [
+    52.256896190805676,
+    51.56920780526667
+   ],
+   "pooled": [
+    52.31166469856004,
+    51.473167777075936
+   ],
+   "frac_pos_neg_tied": 0.3440736015042643
+  },
+  "matched_row|partner_degree": {
+   "per_label": [
+    50.0,
+    50.0
+   ],
+   "pooled": [
+    50.0,
+    50.0
+   ]
+  },
+  "matched_row|knn_degree_k10": {
+   "per_label": [
+    49.30787340012707,
+    49.76082188698294
+   ],
+   "pooled": [
+    49.367614377276794,
+    49.510688950767964
+   ]
+  },
+  "matched_row|knn_newside_degree_k10": {
+   "per_label": [
+    47.98900810390261,
+    50.946561387243804
+   ],
+   "pooled": [
+    48.4928569943898,
+    47.863432357197745
+   ]
+  },
+  "matched_row|knn_link_k5": {
+   "per_label": [
+    52.40860655036853,
+    51.65828633560597
+   ],
+   "pooled": [
+    52.47095441117864,
+    51.53417764014526
+   ]
+  },
+  "matched_row|knn_link_k10": {
+   "per_label": [
+    50.71284956766722,
+    50.391831669065354
+   ],
+   "pooled": [
+    50.71038653721892,
+    50.18421102380174
+   ]
+  },
+  "matched_row|knn_link_k20": {
+   "per_label": [
+    52.091679943663195,
+    51.39921836547624
+   ],
+   "pooled": [
+    52.10446694325642,
+    51.20806729254056
+   ]
+  }
+ },
+ "test_S1": {
+  "construction": {
+   "new drug replaced / known drug replaced / new-drug position kept": 9761,
+   "new drug kept / known drug replaced / new-drug position kept": 113,
+   "new drug replaced / known drug kept / new-drug position kept": 16
+  },
+  "neg_any_recorded_pos": 1684,
+  "neg_label_overlap": 700,
+  "orig|partner_degree": [
+   87.51682701008347,
+   83.57968857291729
+  ],
+  "orig|knn_degree_k10": [
+   85.22083205756547,
+   82.37603714265308
+  ],
+  "orig|knn_newside_degree_k10": [
+   49.602201687399,
+   49.81876742795433
+  ],
+  "orig|knn_link_k5": [
+   59.04057838199021,
+   57.40476482155687
+  ],
+  "orig|knn_link_k10": [
+   66.20374788125007,
+   63.46177745945284
+  ],
+  "orig|knn_link_k20": [
+   73.10489996746924,
+   69.57778683164466
+  ],
+  "matched_rowlabel|partner_degree": {
+   "per_label": [
+    50.0,
+    50.0
+   ],
+   "pooled": [
+    50.0,
+    49.99999999999999
+   ],
+   "frac_pos_neg_tied": 1.0
+  },
+  "matched_rowlabel|knn_degree_k10": {
+   "per_label": [
+    49.81439962807772,
+    49.95860747291132
+   ],
+   "pooled": [
+    49.85787828859921,
+    49.79755562655499
+   ],
+   "frac_pos_neg_tied": 0.007231856720470462
+  },
+  "matched_rowlabel|knn_newside_degree_k10": {
+   "per_label": [
+    49.95981121074146,
+    50.19252157911795
+   ],
+   "pooled": [
+    50.10211574601426,
+    48.537258939925984
+   ],
+   "frac_pos_neg_tied": 0.007231856720470462
+  },
+  "matched_rowlabel|knn_link_k5": {
+   "per_label": [
+    50.03626314656267,
+    50.14112176103611
+   ],
+   "pooled": [
+    50.07293334352926,
+    49.994565847427516
+   ],
+   "frac_pos_neg_tied": 0.6437657870518435
+  },
+  "matched_rowlabel|knn_link_k10": {
+   "per_label": [
+    50.81660126115136,
+    50.487016655459186
+   ],
+   "pooled": [
+    50.814598750494454,
+    50.31130538049523
+   ],
+   "frac_pos_neg_tied": 0.48311805288132054
+  },
+  "matched_rowlabel|knn_link_k20": {
+   "per_label": [
+    51.11605427241326,
+    50.76817258544253
+   ],
+   "pooled": [
+    51.133045991208135,
+    50.6347869363228
+   ],
+   "frac_pos_neg_tied": 0.3623956504428533
+  },
+  "matched_row|partner_degree": {
+   "per_label": [
+    50.0,
+    50.0
+   ],
+   "pooled": [
+    50.0,
+    49.99999999999999
+   ]
+  },
+  "matched_row|knn_degree_k10": {
+   "per_label": [
+    49.665405430241464,
+    49.848219282334945
+   ],
+   "pooled": [
+    49.70195143206704,
+    49.65383562956192
+   ]
+  },
+  "matched_row|knn_newside_degree_k10": {
+   "per_label": [
+    50.15517622822555,
+    50.433267012494284
+   ],
+   "pooled": [
+    50.22472081980235,
+    48.0081432941389
+   ]
+  },
+  "matched_row|knn_link_k5": {
+   "per_label": [
+    50.046722475074375,
+    50.101958871502774
+   ],
+   "pooled": [
+    50.06018075484111,
+    49.93923091177665
+   ]
+  },
+  "matched_row|knn_link_k10": {
+   "per_label": [
+    50.90802077212274,
+    50.51246107497236
+   ],
+   "pooled": [
+    50.894301327493686,
+    50.29171427925917
+   ]
+  },
+  "matched_row|knn_link_k20": {
+   "per_label": [
+    51.83619071829393,
+    51.290985863980254
+   ],
+   "pooled": [
+    51.83349343346635,
+    51.097510799970514
+   ]
+  }
+ }
+}

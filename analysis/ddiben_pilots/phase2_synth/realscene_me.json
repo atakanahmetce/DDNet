@@ -1,0 +1,72 @@
+{
+ "test<-all_train": {
+  "n": 2520,
+  "n_train": 41690,
+  "majority": {
+   "macroF1": 0.4,
+   "acc": 6.0,
+   "kappa": 0.0
+  },
+  "ME_NN": {
+   "macroF1": 7.2,
+   "acc": 22.3,
+   "kappa": 5.7
+  }
+ },
+ "test<-all_train+valid": {
+  "n": 2520,
+  "n_train": 50308,
+  "majority": {
+   "macroF1": 0.4,
+   "acc": 6.0,
+   "kappa": 0.0
+  },
+  "ME_NN": {
+   "macroF1": 7.7,
+   "acc": 24.0,
+   "kappa": 6.1
+  }
+ },
+ "valid_1<-train_1": {
+  "n": 2881,
+  "n_train": 12786,
+  "majority": {
+   "macroF1": 0.6,
+   "acc": 14.1,
+   "kappa": 0.0
+  },
+  "ME_NN": {
+   "macroF1": 9.9,
+   "acc": 25.6,
+   "kappa": 12.4
+  }
+ },
+ "valid_2<-train_2": {
+  "n": 2708,
+  "n_train": 16049,
+  "majority": {
+   "macroF1": 0.7,
+   "acc": 17.0,
+   "kappa": 0.0
+  },
+  "ME_NN": {
+   "macroF1": 15.7,
+   "acc": 35.5,
+   "kappa": 22.2
+  }
+ },
+ "valid_3<-train_3": {
+  "n": 3029,
+  "n_train": 12855,
+  "majority": {
+   "macroF1": 0.9,
+   "acc": 24.2,
+   "kappa": 0.0
+  },
+  "ME_NN": {
+   "macroF1": 18.0,
+   "acc": 42.0,
+   "kappa": 24.2
+  }
+ }
+}

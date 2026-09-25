@@ -1,0 +1,114 @@
+{
+ "twosides_random": {
+  "tani": {
+   "valid_S1": {
+    "ROC_AUC": 86.7,
+    "PR_AUC": 82.9
+   },
+   "valid_S2": {
+    "ROC_AUC": 57.5,
+    "PR_AUC": 58.0
+   },
+   "test_S1": {
+    "ROC_AUC": 86.2,
+    "PR_AUC": 81.7
+   },
+   "test_S2": {
+    "ROC_AUC": 52.8,
+    "PR_AUC": 52.3
+   }
+  },
+  "tgt": {
+   "valid_S1": {
+    "ROC_AUC": 87.8,
+    "PR_AUC": 84.9
+   },
+   "valid_S2": {
+    "ROC_AUC": 64.1,
+    "PR_AUC": 64.2
+   },
+   "test_S1": {
+    "ROC_AUC": 87.0,
+    "PR_AUC": 83.4
+   },
+   "test_S2": {
+    "ROC_AUC": 59.8,
+    "PR_AUC": 58.3
+   }
+  },
+  "mix": {
+   "valid_S1": {
+    "ROC_AUC": 87.8,
+    "PR_AUC": 84.8
+   },
+   "valid_S2": {
+    "ROC_AUC": 63.5,
+    "PR_AUC": 63.5
+   },
+   "test_S1": {
+    "ROC_AUC": 86.9,
+    "PR_AUC": 83.6
+   },
+   "test_S2": {
+    "ROC_AUC": 60.3,
+    "PR_AUC": 59.5
+   }
+  }
+ },
+ "twosides_cluster": {
+  "tani": {
+   "valid_S1": {
+    "ROC_AUC": 84.7,
+    "PR_AUC": 80.4
+   },
+   "valid_S2": {
+    "ROC_AUC": 48.4,
+    "PR_AUC": 53.4
+   },
+   "test_S1": {
+    "ROC_AUC": 83.1,
+    "PR_AUC": 79.0
+   },
+   "test_S2": {
+    "ROC_AUC": 42.8,
+    "PR_AUC": 46.9
+   }
+  },
+  "tgt": {
+   "valid_S1": {
+    "ROC_AUC": 84.8,
+    "PR_AUC": 80.8
+   },
+   "valid_S2": {
+    "ROC_AUC": 46.6,
+    "PR_AUC": 52.0
+   },
+   "test_S1": {
+    "ROC_AUC": 84.1,
+    "PR_AUC": 79.5
+   },
+   "test_S2": {
+    "ROC_AUC": 48.3,
+    "PR_AUC": 49.8
+   }
+  },
+  "mix": {
+   "valid_S1": {
+    "ROC_AUC": 85.4,
+    "PR_AUC": 81.9
+   },
+   "valid_S2": {
+    "ROC_AUC": 49.0,
+    "PR_AUC": 54.1
+   },
+   "test_S1": {
+    "ROC_AUC": 84.8,
+    "PR_AUC": 80.4
+   },
+   "test_S2": {
+    "ROC_AUC": 51.1,
+    "PR_AUC": 51.8
+   }
+  }
+ }
+}

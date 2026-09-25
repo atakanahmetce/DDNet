@@ -1,0 +1,57 @@
+{
+ "best_epoch": 20,
+ "valid_S1_macroF1": 63.8,
+ "S0": {
+  "normal": {
+   "macroF1": 90.0,
+   "acc": 95.2,
+   "kappa": 94.3
+  }
+ },
+ "S1": {
+  "normal": {
+   "macroF1": 61.7,
+   "acc": 69.3,
+   "kappa": 62.5
+  },
+  "swap-new": {
+   "macroF1": 24.1,
+   "acc": 49.3,
+   "kappa": 37.7
+  },
+  "swap-known": {
+   "macroF1": 3.3,
+   "acc": 23.3,
+   "kappa": 5.3
+  },
+  "atypical_frac": 37.1,
+  "normal_on_atypical": {
+   "macroF1": 46.0,
+   "acc": 42.0,
+   "kappa": 36.3
+  },
+  "normal_on_typical": {
+   "macroF1": 63.8,
+   "acc": 85.5,
+   "kappa": 80.6
+  },
+  "agree_with_modal_lookup_pct": 68.0
+ },
+ "S2": {
+  "normal": {
+   "macroF1": 28.7,
+   "acc": 43.8,
+   "kappa": 27.5
+  },
+  "swap-tail": {
+   "macroF1": 5.0,
+   "acc": 28.7,
+   "kappa": 6.8
+  },
+  "swap-head": {
+   "macroF1": 4.5,
+   "acc": 32.4,
+   "kappa": 13.4
+  }
+ }
+}

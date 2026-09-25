@@ -1,0 +1,134 @@
+{
+ "drugbank_random": {
+  "tani": {
+   "valid_S1": {
+    "macroF1": 63.2,
+    "acc": 69.5,
+    "kappa": 63.9,
+    "n": 28823,
+    "new_drug_target_cov": 97.2
+   },
+   "valid_S2": {
+    "macroF1": 34.3,
+    "acc": 44.5,
+    "kappa": 34.1,
+    "n": 1606,
+    "new_drug_target_cov": 97.5
+   }
+  },
+  "tgt": {
+   "valid_S1": {
+    "macroF1": 59.8,
+    "acc": 67.5,
+    "kappa": 61.6,
+    "n": 28823,
+    "new_drug_target_cov": 97.2
+   },
+   "valid_S2": {
+    "macroF1": 33.6,
+    "acc": 43.8,
+    "kappa": 33.8,
+    "n": 1606,
+    "new_drug_target_cov": 97.5
+   }
+  },
+  "mix": {
+   "valid_S1": {
+    "macroF1": 61.4,
+    "acc": 69.9,
+    "kappa": 64.5,
+    "n": 28823,
+    "new_drug_target_cov": 97.2
+   },
+   "valid_S2": {
+    "macroF1": 38.3,
+    "acc": 48.8,
+    "kappa": 39.9,
+    "n": 1606,
+    "new_drug_target_cov": 97.5
+   }
+  },
+  "maxk": {
+   "valid_S1": {
+    "macroF1": 64.7,
+    "acc": 70.4,
+    "kappa": 65.2,
+    "n": 28823,
+    "new_drug_target_cov": 97.2
+   },
+   "valid_S2": {
+    "macroF1": 37.2,
+    "acc": 46.7,
+    "kappa": 37.7,
+    "n": 1606,
+    "new_drug_target_cov": 97.5
+   }
+  }
+ },
+ "drugbank_cluster": {
+  "tani": {
+   "valid_S1": {
+    "macroF1": 26.7,
+    "acc": 60.1,
+    "kappa": 49.5,
+    "n": 21371,
+    "new_drug_target_cov": 90.9
+   },
+   "valid_S2": {
+    "macroF1": 4.4,
+    "acc": 32.3,
+    "kappa": 7.0,
+    "n": 913,
+    "new_drug_target_cov": 88.7
+   }
+  },
+  "tgt": {
+   "valid_S1": {
+    "macroF1": 34.6,
+    "acc": 60.4,
+    "kappa": 50.4,
+    "n": 21371,
+    "new_drug_target_cov": 90.9
+   },
+   "valid_S2": {
+    "macroF1": 9.0,
+    "acc": 36.4,
+    "kappa": 16.8,
+    "n": 913,
+    "new_drug_target_cov": 88.7
+   }
+  },
+  "mix": {
+   "valid_S1": {
+    "macroF1": 33.6,
+    "acc": 61.5,
+    "kappa": 51.7,
+    "n": 21371,
+    "new_drug_target_cov": 90.9
+   },
+   "valid_S2": {
+    "macroF1": 9.1,
+    "acc": 35.7,
+    "kappa": 15.7,
+    "n": 913,
+    "new_drug_target_cov": 88.7
+   }
+  },
+  "maxk": {
+   "valid_S1": {
+    "macroF1": 34.2,
+    "acc": 62.3,
+    "kappa": 52.7,
+    "n": 21371,
+    "new_drug_target_cov": 90.9
+   },
+   "valid_S2": {
+    "macroF1": 8.6,
+    "acc": 36.1,
+    "kappa": 12.9,
+    "n": 913,
+    "new_drug_target_cov": 88.7
+   }
+  }
+ }
+}

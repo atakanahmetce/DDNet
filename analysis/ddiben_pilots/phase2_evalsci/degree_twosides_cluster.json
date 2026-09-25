@@ -1,0 +1,92 @@
+{
+ "S0": {
+  "composition": {
+   "pos_known0": 0,
+   "pos_known1": 0,
+   "pos_known2": 4089,
+   "neg_known0": 0,
+   "neg_known1": 0,
+   "neg_known2": 4089
+  },
+  "label-degree zero": {
+   "ROC_AUC": 95.3,
+   "PR_AUC": 94.0,
+   "n_labels": 209
+  },
+  "label-degree kNN": {
+   "ROC_AUC": 95.3,
+   "PR_AUC": 94.0,
+   "n_labels": 209
+  },
+  "overall-degree zero": {
+   "ROC_AUC": 93.3,
+   "PR_AUC": 91.6,
+   "n_labels": 209
+  },
+  "overall-degree kNN": {
+   "ROC_AUC": 93.3,
+   "PR_AUC": 91.6,
+   "n_labels": 209
+  }
+ },
+ "S1": {
+  "composition": {
+   "pos_known0": 0,
+   "pos_known1": 9272,
+   "pos_known2": 0,
+   "neg_known0": 0,
+   "neg_known1": 9272,
+   "neg_known2": 0
+  },
+  "label-degree zero": {
+   "ROC_AUC": 85.5,
+   "PR_AUC": 81.6,
+   "n_labels": 209
+  },
+  "label-degree kNN": {
+   "ROC_AUC": 83.1,
+   "PR_AUC": 79.0,
+   "n_labels": 209
+  },
+  "overall-degree zero": {
+   "ROC_AUC": 81.7,
+   "PR_AUC": 79.0,
+   "n_labels": 209
+  },
+  "overall-degree kNN": {
+   "ROC_AUC": 79.1,
+   "PR_AUC": 76.0,
+   "n_labels": 209
+  }
+ },
+ "S2": {
+  "composition": {
+   "pos_known0": 523,
+   "pos_known1": 0,
+   "pos_known2": 0,
+   "neg_known0": 523,
+   "neg_known1": 0,
+   "neg_known2": 0
+  },
+  "label-degree zero": {
+   "ROC_AUC": 50.0,
+   "PR_AUC": 50.0,
+   "n_labels": 209
+  },
+  "label-degree kNN": {
+   "ROC_AUC": 42.8,
+   "PR_AUC": 46.9,
+   "n_labels": 209
+  },
+  "overall-degree zero": {
+   "ROC_AUC": 50.0,
+   "PR_AUC": 50.0,
+   "n_labels": 209
+  },
+  "overall-degree kNN": {
+   "ROC_AUC": 41.1,
+   "PR_AUC": 45.6,
+   "n_labels": 209
+  }
+ }
+}

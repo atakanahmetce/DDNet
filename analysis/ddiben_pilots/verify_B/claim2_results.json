@@ -1,0 +1,1022 @@
+{
+ "valid_S1|degree_partners_train": {
+  "trainer": {
+   "roc": 88.02801730472962,
+   "pr": 84.38432638255433,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 88.02801730472962,
+   "pr_nonempty_only": 84.38432638255433
+  },
+  "rowexact": {
+   "roc": 87.99850048548419,
+   "pr": 84.33090338633606,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 87.99850048548419,
+   "pr_nonempty_only": 84.33090338633606
+  },
+  "pooled": {
+   "roc": 87.74167606163672,
+   "pr": 83.886858447014,
+   "n": 297820
+  },
+  "pooled_norm": {
+   "roc": 87.87426170746699,
+   "pr": 84.33864849255583,
+   "n": 297820
+  },
+  "fullmicro": {
+   "roc": 81.03576764343141,
+   "pr": 11.725990785717551
+  }
+ },
+ "valid_S1|degree_edges_train": {
+  "trainer": {
+   "roc": 88.02801730472962,
+   "pr": 84.38432638255433,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 88.02801730472962,
+   "pr_nonempty_only": 84.38432638255433
+  },
+  "rowexact": {
+   "roc": 87.99850048548419,
+   "pr": 84.33090338633606,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 87.99850048548419,
+   "pr_nonempty_only": 84.33090338633606
+  },
+  "pooled": {
+   "roc": 87.74167606163672,
+   "pr": 83.886858447014,
+   "n": 297820
+  },
+  "pooled_norm": {
+   "roc": 87.87426170746699,
+   "pr": 84.33864849255583,
+   "n": 297820
+  },
+  "fullmicro": {
+   "roc": 81.03576764343141,
+   "pr": 11.725990785717551
+  }
+ },
+ "valid_S1|degree_partners_train+valid": {
+  "trainer": {
+   "roc": 93.76492112887361,
+   "pr": 92.62138787656382,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 93.76492112887361,
+   "pr_nonempty_only": 92.62138787656382
+  },
+  "rowexact": {
+   "roc": 93.73278667903317,
+   "pr": 92.55041111883111,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 93.73278667903317,
+   "pr_nonempty_only": 92.55041111883111
+  },
+  "pooled": {
+   "roc": 92.9593500223803,
+   "pr": 91.43192547612932,
+   "n": 297820
+  },
+  "pooled_norm": {
+   "roc": 93.46672150986218,
+   "pr": 92.31873513317892,
+   "n": 297820
+  },
+  "fullmicro": {
+   "roc": 87.53192871986715,
+   "pr": 25.9362154689195
+  }
+ },
+ "valid_S1|knn_degree_k5": {
+  "trainer": {
+   "roc": 84.52395877674994,
+   "pr": 82.51334708638962,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 84.52395877674994,
+   "pr_nonempty_only": 82.51334708638962
+  },
+  "rowexact": {
+   "roc": 84.48803384564715,
+   "pr": 82.4280932687338,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 84.48803384564715,
+   "pr_nonempty_only": 82.4280932687338
+  },
+  "pooled": {
+   "roc": 83.61145353727741,
+   "pr": 81.35673010206112,
+   "n": 297820
+  },
+  "pooled_norm": {
+   "roc": 84.17647102939473,
+   "pr": 82.05977667695133,
+   "n": 297820
+  },
+  "fullmicro": {
+   "roc": 78.8505973630443,
+   "pr": 11.834820232516067
+  }
+ },
+ "valid_S1|knn_link_k5": {
+  "trainer": {
+   "roc": 61.48005138822435,
+   "pr": 59.74606399372897,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 61.48005138822435,
+   "pr_nonempty_only": 59.74606399372897
+  },
+  "rowexact": {
+   "roc": 61.4614429917867,
+   "pr": 59.714967035601795,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 61.4614429917867,
+   "pr_nonempty_only": 59.714967035601795
+  },
+  "pooled": {
+   "roc": 61.701630433088994,
+   "pr": 59.8480864084589,
+   "n": 297820
+  },
+  "pooled_norm": {
+   "roc": 61.70488892668858,
+   "pr": 60.014911980993766,
+   "n": 297820
+  },
+  "fullmicro": {
+   "roc": 60.30339429374239,
+   "pr": 6.120481154529407
+  }
+ },
+ "valid_S1|knn_degree_k10": {
+  "trainer": {
+   "roc": 85.24184335051541,
+   "pr": 82.7288100113705,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 85.24184335051541,
+   "pr_nonempty_only": 82.7288100113705
+  },
+  "rowexact": {
+   "roc": 85.21264935411253,
+   "pr": 82.6663669659801,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 85.21264935411253,
+   "pr_nonempty_only": 82.6663669659801
+  },
+  "pooled": {
+   "roc": 84.20970651908559,
+   "pr": 81.51316943795288,
+   "n": 297820
+  },
+  "pooled_norm": {
+   "roc": 84.89927290731335,
+   "pr": 82.29315827775685,
+   "n": 297820
+  },
+  "fullmicro": {
+   "roc": 79.19276927715991,
+   "pr": 11.455752932687751
+  }
+ },
+ "valid_S1|knn_link_k10": {
+  "trainer": {
+   "roc": 66.48885869842088,
+   "pr": 63.72300107335735,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 66.48885869842088,
+   "pr_nonempty_only": 63.72300107335735
+  },
+  "rowexact": {
+   "roc": 66.47676609241462,
+   "pr": 63.69862940375531,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 66.47676609241462,
+   "pr_nonempty_only": 63.69862940375531
+  },
+  "pooled": {
+   "roc": 66.70878741666306,
+   "pr": 63.78569945269326,
+   "n": 297820
+  },
+  "pooled_norm": {
+   "roc": 66.73143563935041,
+   "pr": 64.13501345880826,
+   "n": 297820
+  },
+  "fullmicro": {
+   "roc": 64.25330099295618,
+   "pr": 6.673128148517546
+  }
+ },
+ "valid_S1|knn_degree_k20": {
+  "trainer": {
+   "roc": 87.05753697160262,
+   "pr": 84.30780029792953,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 87.05753697160262,
+   "pr_nonempty_only": 84.30780029792953
+  },
+  "rowexact": {
+   "roc": 87.02552725231939,
+   "pr": 84.25178519446413,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 87.02552725231939,
+   "pr_nonempty_only": 84.25178519446413
+  },
+  "pooled": {
+   "roc": 85.88348706665838,
+   "pr": 83.02320576193355,
+   "n": 297820
+  },
+  "pooled_norm": {
+   "roc": 86.64093870701853,
+   "pr": 83.81286158698475,
+   "n": 297820
+  },
+  "fullmicro": {
+   "roc": 80.28994819303496,
+   "pr": 11.949386047405493
+  }
+ },
+ "valid_S1|knn_link_k20": {
+  "trainer": {
+   "roc": 74.59347515114051,
+   "pr": 71.10512084074062,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 74.59347515114051,
+   "pr_nonempty_only": 71.10512084074062
+  },
+  "rowexact": {
+   "roc": 74.57643859605628,
+   "pr": 71.07700517794818,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 74.57643859605628,
+   "pr_nonempty_only": 71.07700517794818
+  },
+  "pooled": {
+   "roc": 74.77137220415298,
+   "pr": 71.15031095770831,
+   "n": 297820
+  },
+  "pooled_norm": {
+   "roc": 74.84496824034787,
+   "pr": 71.94569874651206,
+   "n": 297820
+  },
+  "fullmicro": {
+   "roc": 70.74712632200676,
+   "pr": 8.38641008352322
+  }
+ },
+ "test_S1|degree_partners_train": {
+  "trainer": {
+   "roc": 87.51954671151874,
+   "pr": 83.58418579573234,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 87.51954671151874,
+   "pr_nonempty_only": 83.58418579573234
+  },
+  "rowexact": {
+   "roc": 87.51682701008347,
+   "pr": 83.57968857291729,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 87.51682701008347,
+   "pr_nonempty_only": 83.57968857291729
+  },
+  "pooled": {
+   "roc": 87.2031462892653,
+   "pr": 83.04023382834626,
+   "n": 306422
+  },
+  "pooled_norm": {
+   "roc": 87.3383948973633,
+   "pr": 83.5128285019094,
+   "n": 306422
+  },
+  "fullmicro": {
+   "roc": 81.2554732443903,
+   "pr": 11.931586026758763
+  }
+ },
+ "test_S1|degree_edges_train": {
+  "trainer": {
+   "roc": 87.51954671151874,
+   "pr": 83.58418579573234,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 87.51954671151874,
+   "pr_nonempty_only": 83.58418579573234
+  },
+  "rowexact": {
+   "roc": 87.51682701008347,
+   "pr": 83.57968857291729,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 87.51682701008347,
+   "pr_nonempty_only": 83.57968857291729
+  },
+  "pooled": {
+   "roc": 87.2031462892653,
+   "pr": 83.04023382834626,
+   "n": 306422
+  },
+  "pooled_norm": {
+   "roc": 87.3383948973633,
+   "pr": 83.5128285019094,
+   "n": 306422
+  },
+  "fullmicro": {
+   "roc": 81.2554732443903,
+   "pr": 11.931586026758763
+  }
+ },
+ "test_S1|degree_partners_train+valid": {
+  "trainer": {
+   "roc": 87.66900119790178,
+   "pr": 83.74758647419135,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 87.66900119790178,
+   "pr_nonempty_only": 83.74758647419135
+  },
+  "rowexact": {
+   "roc": 87.66640801430728,
+   "pr": 83.74434668784937,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 87.66640801430728,
+   "pr_nonempty_only": 83.74434668784937
+  },
+  "pooled": {
+   "roc": 87.35392081740333,
+   "pr": 83.23141207686218,
+   "n": 306422
+  },
+  "pooled_norm": {
+   "roc": 87.48635229176979,
+   "pr": 83.65320820006363,
+   "n": 306422
+  },
+  "fullmicro": {
+   "roc": 81.38850222653163,
+   "pr": 12.016610579111967
+  }
+ },
+ "test_S1|knn_degree_k5": {
+  "trainer": {
+   "roc": 83.12354546264574,
+   "pr": 80.79089160856036,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 83.12354546264574,
+   "pr_nonempty_only": 80.79089160856036
+  },
+  "rowexact": {
+   "roc": 83.12883506183296,
+   "pr": 80.79259789760128,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 83.12883506183296,
+   "pr_nonempty_only": 80.79259789760128
+  },
+  "pooled": {
+   "roc": 82.12674037619132,
+   "pr": 79.56900391189693,
+   "n": 306422
+  },
+  "pooled_norm": {
+   "roc": 82.71436597122536,
+   "pr": 80.29747164889443,
+   "n": 306422
+  },
+  "fullmicro": {
+   "roc": 77.92406499637782,
+   "pr": 11.040980691344599
+  }
+ },
+ "test_S1|knn_link_k5": {
+  "trainer": {
+   "roc": 59.04804871722732,
+   "pr": 57.410798379784744,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 59.04804871722732,
+   "pr_nonempty_only": 57.410798379784744
+  },
+  "rowexact": {
+   "roc": 59.04057838199021,
+   "pr": 57.40476482155687,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 59.04057838199021,
+   "pr_nonempty_only": 57.40476482155687
+  },
+  "pooled": {
+   "roc": 59.22203166003531,
+   "pr": 57.45977242640598,
+   "n": 306422
+  },
+  "pooled_norm": {
+   "roc": 59.22541394755895,
+   "pr": 57.54741822224665,
+   "n": 306422
+  },
+  "fullmicro": {
+   "roc": 57.82794467909239,
+   "pr": 5.206951884899673
+  }
+ },
+ "test_S1|knn_degree_k10": {
+  "trainer": {
+   "roc": 85.22046953120152,
+   "pr": 82.37762787115102,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 85.22046953120152,
+   "pr_nonempty_only": 82.37762787115102
+  },
+  "rowexact": {
+   "roc": 85.22083205756547,
+   "pr": 82.37603714265308,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 85.22083205756547,
+   "pr_nonempty_only": 82.37603714265308
+  },
+  "pooled": {
+   "roc": 84.11697868478917,
+   "pr": 81.10803829926154,
+   "n": 306422
+  },
+  "pooled_norm": {
+   "roc": 84.82312469437603,
+   "pr": 81.87694723953337,
+   "n": 306422
+  },
+  "fullmicro": {
+   "roc": 79.43445150127,
+   "pr": 11.584382030268603
+  }
+ },
+ "test_S1|knn_link_k10": {
+  "trainer": {
+   "roc": 66.21461061509241,
+   "pr": 63.4712569082441,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 66.21461061509241,
+   "pr_nonempty_only": 63.4712569082441
+  },
+  "rowexact": {
+   "roc": 66.20374788125007,
+   "pr": 63.46177745945284,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 66.20374788125007,
+   "pr_nonempty_only": 63.46177745945284
+  },
+  "pooled": {
+   "roc": 66.39824019213563,
+   "pr": 63.48416338449617,
+   "n": 306422
+  },
+  "pooled_norm": {
+   "roc": 66.44496707929339,
+   "pr": 63.87178499953844,
+   "n": 306422
+  },
+  "fullmicro": {
+   "roc": 63.844594545284075,
+   "pr": 6.486783411549337
+  }
+ },
+ "test_S1|knn_degree_k20": {
+  "trainer": {
+   "roc": 86.18387519309894,
+   "pr": 83.17209219109294,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 86.18387519309894,
+   "pr_nonempty_only": 83.17209219109294
+  },
+  "rowexact": {
+   "roc": 86.18223454840272,
+   "pr": 83.16889226790764,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 86.18223454840272,
+   "pr_nonempty_only": 83.16889226790764
+  },
+  "pooled": {
+   "roc": 85.02176912940354,
+   "pr": 81.90525070264759,
+   "n": 306422
+  },
+  "pooled_norm": {
+   "roc": 85.7546024204139,
+   "pr": 82.6518029095623,
+   "n": 306422
+  },
+  "fullmicro": {
+   "roc": 80.03144892596798,
+   "pr": 11.862685725109296
+  }
+ },
+ "test_S1|knn_link_k20": {
+  "trainer": {
+   "roc": 73.11505693656169,
+   "pr": 69.58647947744493,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 73.11505693656169,
+   "pr_nonempty_only": 69.58647947744493
+  },
+  "rowexact": {
+   "roc": 73.10489996746924,
+   "pr": 69.57778683164466,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 73.10489996746924,
+   "pr_nonempty_only": 69.57778683164466
+  },
+  "pooled": {
+   "roc": 73.25423962204967,
+   "pr": 69.55994486796028,
+   "n": 306422
+  },
+  "pooled_norm": {
+   "roc": 73.3501478270523,
+   "pr": 70.31770720226525,
+   "n": 306422
+  },
+  "fullmicro": {
+   "roc": 69.54142055183826,
+   "pr": 7.934871262180048
+  }
+ },
+ "valid_S2|degree_partners_train": {
+  "trainer": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.0,
+   "pr_nonempty_only": 50.0
+  },
+  "rowexact": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.0,
+   "pr_nonempty_only": 50.0
+  },
+  "pooled": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "n": 18720
+  },
+  "pooled_norm": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "n": 18720
+  },
+  "fullmicro": {
+   "roc": 50.0,
+   "pr": 3.834305564658845
+  }
+ },
+ "valid_S2|degree_edges_train": {
+  "trainer": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.0,
+   "pr_nonempty_only": 50.0
+  },
+  "rowexact": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.0,
+   "pr_nonempty_only": 50.0
+  },
+  "pooled": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "n": 18720
+  },
+  "pooled_norm": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "n": 18720
+  },
+  "fullmicro": {
+   "roc": 50.0,
+   "pr": 3.834305564658845
+  }
+ },
+ "valid_S2|degree_partners_train+valid": {
+  "trainer": {
+   "roc": 91.96229177440499,
+   "pr": 90.89124837995737,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 91.96229177440499,
+   "pr_nonempty_only": 90.89124837995737
+  },
+  "rowexact": {
+   "roc": 91.91035702861917,
+   "pr": 90.8429510675273,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 91.91035702861917,
+   "pr_nonempty_only": 90.8429510675273
+  },
+  "pooled": {
+   "roc": 90.52870062184965,
+   "pr": 88.67647036702543,
+   "n": 18720
+  },
+  "pooled_norm": {
+   "roc": 91.38836040799183,
+   "pr": 90.19914157836892,
+   "n": 18720
+  },
+  "fullmicro": {
+   "roc": 87.19275256531861,
+   "pr": 27.29011568084675
+  }
+ },
+ "valid_S2|knn_degree_k5": {
+  "trainer": {
+   "roc": 56.31264669155033,
+   "pr": 57.092167310210606,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 56.31264669155033,
+   "pr_nonempty_only": 57.092167310210606
+  },
+  "rowexact": {
+   "roc": 56.48050369420373,
+   "pr": 57.19477468244749,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 56.48050369420373,
+   "pr_nonempty_only": 57.19477468244749
+  },
+  "pooled": {
+   "roc": 56.31725005022281,
+   "pr": 54.93569171608578,
+   "n": 18720
+  },
+  "pooled_norm": {
+   "roc": 56.49976714880561,
+   "pr": 54.87964017439568,
+   "n": 18720
+  },
+  "fullmicro": {
+   "roc": 58.33668805111807,
+   "pr": 5.171479905500444
+  }
+ },
+ "valid_S2|knn_degree_k10": {
+  "trainer": {
+   "roc": 50.37786978911563,
+   "pr": 52.220914405827024,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.37786978911563,
+   "pr_nonempty_only": 52.220914405827024
+  },
+  "rowexact": {
+   "roc": 50.70998206054119,
+   "pr": 52.409313308889196,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.70998206054119,
+   "pr_nonempty_only": 52.409313308889196
+  },
+  "pooled": {
+   "roc": 50.98783752008913,
+   "pr": 50.2654096878849,
+   "n": 18720
+  },
+  "pooled_norm": {
+   "roc": 50.923629373949886,
+   "pr": 50.034063419860786,
+   "n": 18720
+  },
+  "fullmicro": {
+   "roc": 55.15800382848107,
+   "pr": 4.45316225248266
+  }
+ },
+ "valid_S2|knn_degree_k20": {
+  "trainer": {
+   "roc": 56.910129337531245,
+   "pr": 57.53228775510274,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 56.910129337531245,
+   "pr_nonempty_only": 57.53228775510274
+  },
+  "rowexact": {
+   "roc": 57.137981530567394,
+   "pr": 57.72430128325492,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 57.137981530567394,
+   "pr_nonempty_only": 57.72430128325492
+  },
+  "pooled": {
+   "roc": 55.19738190791876,
+   "pr": 54.391229352078874,
+   "n": 18720
+  },
+  "pooled_norm": {
+   "roc": 56.7928543219008,
+   "pr": 55.299781924932965,
+   "n": 18720
+  },
+  "fullmicro": {
+   "roc": 58.476577564088,
+   "pr": 5.069114583509558
+  }
+ },
+ "test_S2|degree_partners_train": {
+  "trainer": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.0,
+   "pr_nonempty_only": 50.0
+  },
+  "rowexact": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.0,
+   "pr_nonempty_only": 50.0
+  },
+  "pooled": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "n": 20638
+  },
+  "pooled_norm": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "n": 20638
+  },
+  "fullmicro": {
+   "roc": 50.0,
+   "pr": 3.7921048956702603
+  }
+ },
+ "test_S2|degree_edges_train": {
+  "trainer": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.0,
+   "pr_nonempty_only": 50.0
+  },
+  "rowexact": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.0,
+   "pr_nonempty_only": 50.0
+  },
+  "pooled": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "n": 20638
+  },
+  "pooled_norm": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "n": 20638
+  },
+  "fullmicro": {
+   "roc": 50.0,
+   "pr": 3.7921048956702603
+  }
+ },
+ "test_S2|degree_partners_train+valid": {
+  "trainer": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.0,
+   "pr_nonempty_only": 50.0
+  },
+  "rowexact": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 50.0,
+   "pr_nonempty_only": 50.0
+  },
+  "pooled": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "n": 20638
+  },
+  "pooled_norm": {
+   "roc": 50.0,
+   "pr": 50.0,
+   "n": 20638
+  },
+  "fullmicro": {
+   "roc": 50.0,
+   "pr": 3.7921048956702603
+  }
+ },
+ "test_S2|knn_degree_k5": {
+  "trainer": {
+   "roc": 47.18113749702886,
+   "pr": 49.89017657485056,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 47.18113749702886,
+   "pr_nonempty_only": 49.89017657485056
+  },
+  "rowexact": {
+   "roc": 47.256964076133265,
+   "pr": 49.911583208931795,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 47.256964076133265,
+   "pr_nonempty_only": 49.911583208931795
+  },
+  "pooled": {
+   "roc": 47.9777325433226,
+   "pr": 47.97996197722257,
+   "n": 20638
+  },
+  "pooled_norm": {
+   "roc": 47.623324899745036,
+   "pr": 47.638590542873025,
+   "n": 20638
+  },
+  "fullmicro": {
+   "roc": 49.72676345009477,
+   "pr": 3.723876378097467
+  }
+ },
+ "test_S2|knn_degree_k10": {
+  "trainer": {
+   "roc": 51.03670451676165,
+   "pr": 50.7161830984168,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 51.03670451676165,
+   "pr_nonempty_only": 50.7161830984168
+  },
+  "rowexact": {
+   "roc": 51.24705687512208,
+   "pr": 50.837804173433184,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 51.24705687512208,
+   "pr_nonempty_only": 50.837804173433184
+  },
+  "pooled": {
+   "roc": 51.07769864925507,
+   "pr": 49.07607068971585,
+   "n": 20638
+  },
+  "pooled_norm": {
+   "roc": 51.044436145266225,
+   "pr": 48.63447530350235,
+   "n": 20638
+  },
+  "fullmicro": {
+   "roc": 53.47662596972593,
+   "pr": 4.050945000191031
+  }
+ },
+ "test_S2|knn_degree_k20": {
+  "trainer": {
+   "roc": 52.208869732554,
+   "pr": 53.47699008474943,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 52.208869732554,
+   "pr_nonempty_only": 53.47699008474943
+  },
+  "rowexact": {
+   "roc": 52.2574740153941,
+   "pr": 53.42510287245757,
+   "labels_scored": 209,
+   "labels_empty": 0,
+   "labels_single_class": 0,
+   "roc_nonempty_only": 52.2574740153941,
+   "pr_nonempty_only": 53.42510287245757
+  },
+  "pooled": {
+   "roc": 52.05129496308763,
+   "pr": 51.60906031228758,
+   "n": 20638
+  },
+  "pooled_norm": {
+   "roc": 52.430064994886784,
+   "pr": 51.09163688139429,
+   "n": 20638
+  },
+  "fullmicro": {
+   "roc": 54.62717060594148,
+   "pr": 4.364815395046532
+  }
+ }
+}
