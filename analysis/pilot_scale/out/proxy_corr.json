@@ -1,0 +1,21 @@
+{
+ "n_pool": 3618,
+ "TC_quantiles_25_50_75_90_99": [
+  0.0,
+  1.0,
+  3.0,
+  7.0,
+  30.0
+ ],
+ "frac_zero_targets": 0.37893864013267,
+ "rho_TC_degree": 0.36512416230097083,
+ "median_degree_zero_targets": 362.0,
+ "median_degree_nonzero_targets": 804.0,
+ "rho_MW_degree": -0.06251692523954522,
+ "rho_logP_degree": 0.12685114374941317,
+ "rho_rotB_degree": -0.0481449547401791,
+ "rho_rings_degree": 0.06154513632740017,
+ "cv_rho_pred_logdeg_from_tc": 0.33425616557185683,
+ "cv_rho_pred_logdeg_from_desc": 0.23939147292740984,
+ "cv_rho_pred_logdeg_from_tc+desc": 0.39306980368260724
+}
